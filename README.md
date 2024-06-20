@@ -26,8 +26,6 @@ Users should be able to:
 
 ### Screenshot
 
-Insert a screenshot of your solution here. Replace the path and alt text accordingly.
-
 ![JobSorter](./images/screenshot1.jpg)
 
 ![Filtering](./images/screenshot2.jpg)
