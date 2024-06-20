@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary */
+    --desaturated-dark-cyan: hsl(180, 29%, 50%);
+  
+    /* Neutral */
+    --light-grayish-cyan-background: hsl(180, 52%, 96%);
+    --light-grayish-cyan-filter-tablets: hsl(180, 31%, 95%);
+    --dark-grayish-cyan: hsl(180, 8%, 52%);
+    --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+a {
+    color: var(--desaturated-dark-cyan);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+body {
+    font-family: "League Spartan", sans-serif;
+    font-size: 15px;
+    background-color: var(--light-grayish-cyan-background);
+    color: var(--very-dark-grayish-cyan);
+}
+
+main {
+    position: relative;
+}
+
+.background {
+    background: url("./images/bg-header-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: var(--desaturated-dark-cyan);
+    width: 100%;
+    height: 156px;
+}
+
+.card-section {
+    width: 100%;
+    margin: 74px 0 120px;
+    text-align: center;
+}
+
+
+.card {
+    margin: 23px auto 0;
+    width: 1111px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.2s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+#card1, #card2 {
+    border-left: 6px solid var(--desaturated-dark-cyan);
+}
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.name-and-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+}
+
+.name {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.company-name {
+    color: var(--desaturated-dark-cyan);
+    margin-right: 8px;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.features {
+    display: flex;
+    gap: 8px;
+}
+
+.feature1 p , .feature2 p{
+    margin-top: 3px;
+}
+
+.feature1 {
+    text-transform: uppercase;
+    color: white;
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    border-radius: 12px;
+    font-size: 14px;
+    background-color: var(--desaturated-dark-cyan);
+}
+
+.feature2 {
+    text-transform: uppercase;
+    color: white;
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    border-radius: 12px;
+    font-size: 14px;
+    background-color: var(--very-dark-grayish-cyan);
+}
+
+.features {
+    display: none;
+}
+
+#card1 .features, #card2 .features {
+    display: flex;
+}
+
+#card3 .features .feature2 {
+    display: flex;
+}
+
+.position {
+    font-size: 24px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.position:hover {
+    color: var(--desaturated-dark-cyan);
+}
+
+.details {
+    display: flex;
+    align-content: center;
+    font-size: 18px;
+    color: var(--dark-grayish-cyan);
+    gap: 20px;
+    font-weight: 500;
+}
+
+.logo {
+    z-index: 1;
+}
+
+.dot {
+    font-size: 20px;
+}
+
+.tag-section {
+    display: flex;
+    font-weight: 700;
+    gap: 16px;
+}
+
+.languages, .tools {
+    display: flex;
+    gap: 16px;
+}
+
+.tag {
+    color: var(--desaturated-dark-cyan);
+    background-color: var(--light-grayish-cyan-filter-tablets);
+    padding: 9px 11px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.tag:hover {
+    background-color: var(--desaturated-dark-cyan);
+    color: var(--light-grayish-cyan-background);
+}
+
+.filter-panel {
+    display: none;
+}
+
+.selection-panel {
+    z-index: 2;
+    padding: 20px 40px;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1111px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selection-tags {
+    display: flex;
+    gap: 16px;
+}
+
+.selection-tag {
+    display: inline-flex;
+    padding: 0;
+    align-items: center;
+}
+
+.selection-tag p {
+    padding: 9px 11px;
+    font-weight: 700;
+}
+
+.selection-tag:hover {
+    color: var(--desaturated-dark-cyan);
+    background-color: var(--light-grayish-cyan-filter-tablets);
+}
+
+.cross {
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--desaturated-dark-cyan);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    transition: 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.cross:hover {
+    background-color: var(--very-dark-grayish-cyan);
+}
+
+
+@media screen and (max-width: 1150px) {
+    .selection-panel {
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    .selection-tags {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .card {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .background {
+        background-image: url("./images/bg-header-mobile.svg");
+    }
+    .card, .selection-panel {
+        width: 90%;
+    }
+    .selection-panel {
+        top: 85px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .card {
+        position: relative;
+        margin: 56px auto 0;
+        padding: 24px;
+        gap: 30px;
+    }
+    .logo {
+        height: 48px;
+        position: absolute;
+        top: -24px;
+        left: 24px;
+    }
+    .tag-section {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+    #card1 {
+        padding-bottom: 8px;
+    }
+    .company-name {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .position {
+        font-size: 20px;
+    }
+    .languages, .tools {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .details {
+        font-size: 15px;
+        gap: 10px;
+        justify-content: center;
+    }
+    .selection-panel {
+        top: 45px;
+    }
+}
+
+
+@media screen and (max-width: 512px) {
+    #card1 {
+        padding-bottom: 24px;
+    }
+    .content-area {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    #card1 {
+        padding-bottom: 24px;
+    }
+    .content-area {
+        margin-top: 10px;
+    }
+    .selection-tags {
+        width: 80%;
+        flex-wrap: wrap;
+    }
+}
